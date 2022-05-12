@@ -17,4 +17,5 @@ import solarLunarConverter from 'solar-lunar-converter';
 
 const solarDate = new Date('Sun Dec 26 2021 20:35:23 GMT+0700');
 const lunarDate = solarLunarConverter.convertSolar2Lunar(solarDate) // [23, 11, 2021, 0]
+const lunarDate = solarLunarConverter.toLunar(solarDate) // 23/11/2021
 ```
