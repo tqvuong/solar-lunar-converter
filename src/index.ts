@@ -24,8 +24,10 @@ class Converter extends LunarSolarConverter {
     }
 }
 
-const converter = new Converter()
+const lunarSolarConverter = new Converter()
 
 export {
-    converter as default,
+    lunarSolarConverter,
 }
+
+export default lunarSolarConverter;
