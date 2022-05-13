@@ -1,6 +1,5 @@
 import LunarSolarConverter from './package/converter.js';
 
-
 class Converter extends LunarSolarConverter {
     _isValidDate(date: any): boolean {
         return date instanceof Date && !Number.isNaN(date);
@@ -25,4 +24,8 @@ class Converter extends LunarSolarConverter {
     }
 }
 
-export default new Converter()
+const converter = new Converter()
+
+export {
+    converter as default,
+}
