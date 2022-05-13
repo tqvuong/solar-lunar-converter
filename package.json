@@ -1,20 +1,22 @@
 {
   "name": "solar-lunar-converter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "git@github.com:tqvuong/solar-lunar-converter.git",
   "author": "tqvuong <tqvuong.dev@gmail.com>",
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "dependencies": {},
   "devDependencies": {
     "typescript": "^4.6.4"
   },
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build",
+    "prepare": "npm run build",
     "postversion": "git push && git push --tags"
   }
 }
