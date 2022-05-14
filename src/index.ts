@@ -1,16 +1,20 @@
 import LunarSolarConverter from './package/converter.js';
 
 class Converter extends LunarSolarConverter {
-    _isValidDate(date: any): boolean {
-        return date instanceof Date && !Number.isNaN(date);
+    private _isValidDate(date: any): boolean {
+        const _date = Date.parse(date);
+        if (isNaN(_date)) {
+            return false
+        }
+        return true
     }
 
-    _parse_to_params(date: Date) {
+    private _parse_to_params(date: any) {
         const _date = new Date(date);
         return [_date.getDate(), _date.getMonth() + 1, _date.getFullYear()];
     }
 
-    convertSolar2Lunar(date: any) {
+     convertSolar2Lunar(date: any) {
         if (!this._isValidDate(date)) {
             throw new Error(`${date} invalid date`);
         }
