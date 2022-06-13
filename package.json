@@ -7,6 +7,7 @@
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "keywords": ["solar2lunar", "solarLunarConverter"],
   "files": [
     "lib"
   ],
@@ -16,7 +17,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "prepublish": "yarn build",
+    "prepare": "yarn build",
     "postversion": "git push && git push --tags"
   }
 }

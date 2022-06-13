@@ -2,10 +2,13 @@
     "compilerOptions": {
       "target": "es5",
       "module": "commonjs",
+      "lib": ["es2017", "es7", "es6", "dom"],
       "declaration": true,
+      "esModuleInterop": true,
       "outDir": "./lib",
       "strict": true,
       "allowJs": true,
+      "baseUrl": "./src"
     },
     "lib": ["es6"],
     "include": ["src"],
