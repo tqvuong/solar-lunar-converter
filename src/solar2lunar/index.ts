@@ -1,6 +1,6 @@
-import LunarSolarConverter from "../package/converter";
+import _LunarSolarConverter from "../package/converter";
 
-class Solar2LunarConverter extends LunarSolarConverter {
+export class Solar2LunarConverter extends _LunarSolarConverter {
   private _isValidDate(date: any): boolean {
     const _date = Date.parse(date);
     if (isNaN(_date)) {
@@ -28,4 +28,8 @@ class Solar2LunarConverter extends LunarSolarConverter {
   }
 }
 
-export default Solar2LunarConverter;
+const solar2LunarConverter = new Solar2LunarConverter();
+
+export { _LunarSolarConverter, solar2LunarConverter };
+
+export default solar2LunarConverter;

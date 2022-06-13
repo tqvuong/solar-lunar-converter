@@ -5,21 +5,23 @@
   "author": "tqvuong <tqvuong.dev@gmail.com>",
   "license": "MIT",
   "type": "module",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "solar2lunar",
     "solarLunarConverter"
   ],
   "files": [
-    "lib"
+    "dist"
   ],
   "dependencies": {},
   "devDependencies": {
     "typescript": "^4.6.4"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --traceResolution",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
     "prepublish": "yarn build",
     "prepare": "yarn build",
     "postversion": "git push && git push --tags"

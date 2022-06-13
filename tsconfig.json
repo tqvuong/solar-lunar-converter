@@ -1,16 +1,18 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module": "commonjs",
-      "lib": ["es2017", "es7", "es6", "dom"],
-      "declaration": true,
-      "esModuleInterop": true,
-      "outDir": "./lib",
-      "strict": true,
-      "allowJs": true,
-      "baseUrl": "./src"
-    },
-    "lib": ["es6"],
-    "include": ["src"],
-    "exclude": ["node_modules", "**/__tests__/*"]
-  }
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es5", "es2015", "es2016", "dom", "esnext"],
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "outDir": "dist/esm",
+    "strict": true,
+    "allowJs": true,
+    "baseUrl": "./src"
+  },
+  "lib": ["es6"],
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
